@@ -15,7 +15,7 @@ body{
 }
 
 p{
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .container{
@@ -52,20 +52,20 @@ label>p{
     margin-top: 15%;
 }
 button{
-    width: 120px;
-    height: 40px;
+    width: 140px;
+    height: 60px;
     background-color: blue;
     color: white;
     border: none;
     transition: .2s;
     cursor: pointer;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 button:hover{
     background-color: rgb(59, 59, 255);
-    width: 130px;
+  
 }
 input{
     width: 20px;
@@ -78,6 +78,9 @@ button:hover{
 
 @media screen and (max-width: 678px){
     .container{width: 90%; margin-top: 50%;}
+    p{
+        font-size: 26px;
+    }
 }
 
 
