@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import Questions from './components/Questions';
+import Questions from './components/Questions/Questions';
 
 
 function App() {
