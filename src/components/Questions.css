@@ -1,0 +1,70 @@
+.d-flex{display: flex;}
+.item-center{align-items: center;}
+.content-around{justify-content: space-around;}
+.m-auto{margin: auto;}
+.w100{width: 100%;}
+.bg-color{background-color: rgba(255, 255, 255, 0.8);}
+.red{background-color: red;}
+.green{background-color: green;}
+.text-center{text-align: center;}
+
+body{
+    font-family: 'Hind', sans-serif;
+    background-image: url(../images/Geometric-Pattern-Wallpaper-7.jpg);
+    background-attachment: fixed;
+}
+
+p{
+    font-size: 24px;
+}
+
+.container{
+    width: 70%;
+    border-radius: 15px;
+    margin: 10% auto;
+}
+
+.content{
+    width: 90%;
+    padding: 5% 0%;
+    border-bottom: 1px solid black; 
+
+}
+
+label>p{
+    margin-top: -1%;
+    font-size: 18px;
+    padding-left: 3px;
+}
+.btn-place{
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    padding: 16px 0;
+    justify-content: center;
+}
+
+button{
+    background-color: rgb(46, 46, 206);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+input{
+    width: 20px;
+    height: 20px;
+}
+
+button:hover{
+    background-color: blue;
+}
+
+@media screen and (max-width: 678px){
+    .container{width: 90%;}
+}
+
+
