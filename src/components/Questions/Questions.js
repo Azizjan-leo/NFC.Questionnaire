@@ -27,8 +27,8 @@ function Questions(){
     })
 
     const logins = (val)=>{
-        if(val.length < 8){
-                setMessage("ваш ID меньше 8")
+        if(val.length > 8){
+                setMessage("ID не должен превышать 8 знаков")
         }else{
             // fetch('URL_GOES_HERE', { 
             //     method: 'post', 
