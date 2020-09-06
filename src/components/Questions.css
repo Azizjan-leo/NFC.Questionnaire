@@ -51,6 +51,32 @@ label>p{
     justify-content: space-evenly;
     margin-top: 15%;
 }
+.login{
+    margin-top: 1%;
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.error{
+    color: red;
+    font-size: 12px;
+    text-align: center;
+}
+.loginInput{
+    width: 260px;
+    height: 50px;
+    font-size: 22px;
+    appearance:textfield;
+}
+.authBtn{
+    margin-left: -20%;
+}
 button{
     width: 140px;
     height: 60px;
