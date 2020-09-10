@@ -2,30 +2,15 @@ import React, {useState, useEffect}from "react"
 import "../Questions.css"
 import Auth from "../Auth/Auth"
 
-function Questions(){
-    const [data] = useState(["Заехали к нам, когда стрелка была уже «на нуле»?",
-                                    "Заглянули за стаканчиком вашего любимого кофе?",
-                                    "Оператор был вежлив и улыбчив?",
-                                    "Хорошо помыли авто на мойке?",
-                                    "Спасибо за ваши ответы"])
+function Questions(props){
     const [count, setCount] = useState(0)
-    const [oneQuestion, setOnequsetion] = useState('')
-    const [show, setShow] = useState(false)
     const [auth, setAuth] = useState(false)
     const [message, setMessage] = useState('')
-    useEffect(()=>{
-        if(count==data.length-1){
-            setOnequsetion(data[count])
-            setShow(true)
-        }else if(count<data.length){
-            setOnequsetion(data[count])
-        }
-        else{
-            setCount(0)
-            setShow(false)
-        }
-    })
-
+    const data = props.data
+    
+    const go =()=>{
+        setCount(0)    
+    }
     const logins = (val)=>{
         if(val.length > 8){
                 setMessage("ID не должен превышать 8 знаков")
@@ -50,18 +35,20 @@ function Questions(){
                 bg-color animate__animated animate__backInDown">
                     <div className="content m-auto">
                         <div className="answer text-center">
-                            <p>{oneQuestion}</p>
+                            {count<data.length && 
+                                <p id={data[count].id}>{data[count].question}</p> ||
+                                <p>СПАСИБО ЗА ОТВЕТЫ</p>
+                            }
+                           
                         </div>
                         
-                        {!show  &&
+                        {count<data.length  &&
                             <div className="answers">
-                                <button onClick={()=>setCount(count+1)}>Нет</button>
-                                <button onClick={()=>setCount(count+1)}>Да</button>
-                            </div>
-                            
-                        }{show &&
+                                <button onClick={()=>{setCount(count+1)}}>Нет</button>
+                                <button onClick={()=>{setCount(count+1)}}>Да</button>
+                            </div> ||
                             <div className="answers">
-                                <button onClick={()=>setCount(count+1)}>OK</button>
+                                <button onClick={()=>{go()}}>OK</button>
                             </div>
                         }
                         
