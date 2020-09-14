@@ -19,11 +19,15 @@ p{
     font-size: 32px;
 }
 
+.main {
+    display: flex;
+    margin: auto;
+    height: 100vh;
+}
+
 .container{
     box-sizing: border-box;
     width: 70%;
-    border-radius: 15px;
-    margin: 5% auto;
     max-height: 500px;
 }
 
