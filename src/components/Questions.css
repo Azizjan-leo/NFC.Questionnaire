@@ -1,3 +1,4 @@
+
 .d-flex{display: flex;}
 .item-center{align-items: center;}
 .content-around{justify-content: space-around;}
@@ -19,14 +20,17 @@ p{
 }
 
 .container{
+    box-sizing: border-box;
     width: 70%;
     border-radius: 15px;
-    margin: 10% auto;
+    margin: 5% auto;
+    max-height: 500px;
 }
 
 .content{
     width: 90%;
     padding: 15% 0%; 
+    
 
 }
 
